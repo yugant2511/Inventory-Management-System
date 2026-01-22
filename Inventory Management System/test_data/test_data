@@ -1,0 +1,133 @@
+INVENTORY MANAGEMENT SYSTEM - TEST DATA
+
+---------------------------------
+1. PRODUCT TEST DATA
+---------------------------------
+SKU: PROD001
+Name: Laptop
+Category: Electronics
+Price: 75000
+Quantity: 25
+
+SKU: PROD002
+Name: Mouse
+Category: Electronics
+Price: 1200
+Quantity: 5
+
+SKU: PROD003
+Name: Notebook
+Category: Stationery
+Price: 50
+Quantity: 100
+
+SKU: PROD004
+Name: Pen
+Category: Stationery
+Price: 10
+Quantity: 200
+
+SKU: PROD005
+Name: Keyboard
+Category: Electronics
+Price: 1500
+Quantity: 3
+
+
+---------------------------------
+2. LOW STOCK TEST DATA
+---------------------------------
+Low stock threshold: 10
+
+PROD002 - Mouse - Quantity: 5
+PROD005 - Keyboard - Quantity: 3
+
+
+---------------------------------
+3. UPDATE QUANTITY TEST DATA
+---------------------------------
+SKU: PROD002
+Old Quantity: 5
+New Quantity: 20
+
+SKU: PROD001
+Old Quantity: 20
+New Quantity: 25
+
+
+---------------------------------
+4. UNDO OPERATION TEST DATA
+---------------------------------
+SKU: PROD002
+Before Update: 5
+After Update: 20
+Undo Result: Quantity reverted to 5
+
+
+---------------------------------
+5. SORTING TEST DATA
+---------------------------------
+Sort by Price:
+Laptop
+Keyboard
+Mouse
+Notebook
+Pen
+
+Sort by Name:
+Keyboard
+Laptop
+Mouse
+Notebook
+Pen
+
+Sort by Inventory Value:
+PROD001 - 1875000
+PROD002 - 6000
+PROD003 - 5000
+PROD004 - 2000
+PROD005 - 4500
+
+
+---------------------------------
+6. SEARCH TEST DATA
+---------------------------------
+Search by SKU: PROD003
+Expected Result: Notebook
+
+Search by Name: Pen
+Expected Result: Pen
+
+Search by SKU: PROD999
+Expected Result: Product not found
+
+
+---------------------------------
+7. TRANSACTION HISTORY TEST DATA
+---------------------------------
+ADD: PROD001 - Quantity 25
+ADD: PROD002 - Quantity 5
+UPDATE: PROD002 - Quantity changed from 8 to 5
+ADD: PROD005 - Quantity 3
+UPDATE: PROD001 - Quantity changed from 20 to 25
+
+
+---------------------------------
+8. INVENTORY STATISTICS TEST DATA
+---------------------------------
+Total Products: 5
+Total Inventory Value: 1887000
+
+Category-wise:
+Electronics - 3 products - Value: 1881000
+Stationery - 2 products - Value: 7000
+
+
+---------------------------------
+9. INVALID INPUT TEST DATA
+---------------------------------
+Duplicate SKU: PROD001
+Expected Result: Product already exists
+
+Negative Quantity Input: -5
+Expected Result: Invalid quantity
