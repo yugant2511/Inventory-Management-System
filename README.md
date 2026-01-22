@@ -27,5 +27,3 @@ It demonstrates the use of core Java concepts such as Collections Framework, OOP
 - Stack for undo operations
 - Queue for low stock alerts
 
-## Project Structure
-
